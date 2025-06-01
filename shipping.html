@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Shipping Details - Khaadi</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-gray-800 min-h-screen">
+
+  <!-- Navbar -->
+  <nav class="bg-orange-600 text-white p-4 shadow">
+    <div class="container mx-auto flex justify-between items-center">
+      <div class="flex items-center gap-3">
+        <img src="aa.jpg" alt="Khaadi Logo" class="h-10" />
+        <h1 class="text-2xl font-bold">Khaadi</h1>
+      </div>
+      <ul class="flex gap-6 text-sm">
+        <li><a href="homepage.html" class="hover:underline">Home</a></li>
+        <li><a href="product.php" class="hover:underline">Products</a></li>
+        <li><a href="order.html" class="hover:underline">Order</a></li>
+        <li><a href="register.html" class="hover:underline">Register</a></li>
+        <li><a href="login.html" class="hover:underline">Login</a></li>
+        <li><a href="reviews.html" class="hover:underline">Reviews</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Shipping Form -->
+  <div class="container mx-auto px-4 py-10">
+    <div class="bg-white p-6 rounded shadow-md max-w-xl mx-auto">
+      <h2 class="text-2xl font-bold text-center mb-6 text-orange-600">Shipping Information</h2>
+
+      <form action="shipping.php" method="POST" autocomplete="off">
+        <div class="space-y-4">
+          <div>
+            <label for="customerID" class="block font-medium">Customer ID:</label>
+            <input type="number" name="customerID" id="customerID" required
+              class="w-full border px-3 py-2 rounded" autocomplete="off" />
+          </div>
+
+          <div>
+            <label for="address" class="block font-medium">Address Line:</label>
+            <input type="text" name="address" id="address" required
+              class="w-full border px-3 py-2 rounded" autocomplete="off" />
+          </div>
+
+          <div>
+            <label for="city" class="block font-medium">City:</label>
+            <input type="text" name="city" id="city" required
+              class="w-full border px-3 py-2 rounded" autocomplete="off" />
+          </div>
+
+          <div>
+            <label for="postalCode" class="block font-medium">Postal Code:</label>
+            <input type="text" name="postalCode" id="postalCode" required
+              class="w-full border px-3 py-2 rounded" autocomplete="off" />
+          </div>
+
+          <div>
+            <label for="province" class="block font-medium">Province:</label>
+            <input type="text" name="province" id="province" required
+              class="w-full border px-3 py-2 rounded" autocomplete="off" />
+          </div>
+        </div>
+
+        <div class="flex justify-between mt-6">
+          <button type="submit"
+            class="bg-green-600 text-white px-6 py-2 rounded hover:bg-green-700">Place Order</button>
+          <a href="homepage.html"
+            class="bg-red-500 text-white px-6 py-2 rounded hover:bg-red-600">Cancel</a>
+        </div>
+      </form>
+    </div>
+  </div>
+
+</body>
+</html>

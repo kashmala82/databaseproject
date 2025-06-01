@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Customer Feedback - Khaadi</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 text-gray-800">
+  <!-- Navbar -->
+  <nav class="bg-orange-600 text-white p-4 shadow">
+    <div class="container mx-auto flex justify-between items-center">
+      <div class="flex items-center gap-3">
+        <img src="aa.jpg" alt="Khaadi Logo" class="h-10" />
+      </div>
+      <ul class="flex gap-6 text-sm font-semibold">
+        <li><a href="homepage.html" class="hover:underline">Home</a></li>
+        <li><a href="PRODUCT.PHP" class="hover:underline">Products</a></li>
+        <li><a href="register.html" class="hover:underline">Register</a></li>
+        <li><a href="login.html" class="hover:underline">Login</a></li>
+                <li><a href="reviews.html" class="hover:underline">reviews</a></li>
+      </ul>
+    </div>
+  </nav>
+  </nav>
+
+  <!-- Feedback Form -->
+  <div class="container mx-auto px-4 py-10 max-w-xl">
+    <div class="bg-white p-6 rounded shadow-md">
+      <h2 class="text-2xl font-bold mb-6 text-center">Give Your Feedback</h2>
+      <form action="reviews.php" method="POST" class="space-y-4">
+        <div>
+          <label class="block mb-1">Customer ID:</label>
+          <input type="number" name="customer_id" class="w-full px-3 py-2 border rounded" required>
+        </div>
+
+        <div>
+          <label class="block mb-1">Date:</label>
+          <input type="date" name="date" class="w-full px-3 py-2 border rounded" required>
+        </div>
+
+        <div>
+          <label class="block mb-1">Feedback:</label>
+          <textarea name="feedback_text" rows="4" class="w-full px-3 py-2 border rounded" required></textarea>
+        </div>
+
+        <div>
+          <label class="block mb-1">Rating:</label>
+          <input type="number" name="rating" class="w-full px-3 py-2 border rounded" required>
+        </div>
+
+        <button type="submit" class="w-full bg-orange-600 text-white py-2 rounded hover:bg-orange-700">
+          Submit Feedback
+        </button>
+      </form>
+    </div>
+  </div>
+</body>
+</html>
